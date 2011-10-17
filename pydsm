@@ -4,6 +4,7 @@ import subprocess
 import select
 import sys
 import os
+import string
 
 debug = False
 
@@ -16,7 +17,7 @@ password = config.get('main', 'password')
 if len(sys.argv) <= 1:
     raise RuntimeError("Not enough parameters")
 
-cmd = [ "dsmadmc", "-id=%s"%user, "-password=%s"%password, "-comma",  sys.argv[1] ]
+cmd = [ "/usr/bin/dsmadmc", "-id=%s"%user, "-password=%s"%password, "-comma",  string.join(sys.argv[1::]) ]
 process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
 
 if False:
