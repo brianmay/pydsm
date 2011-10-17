@@ -1,0 +1,3 @@
+#!/bin/sh
+
+./pydsm 'select start_time, end_time,end_time-start_time as "Elapsed Time" ,entity,processes, bytes,((cast(bytes as decimal(18,0)) / cast((end_time-start_time)seconds as decimal(18,0))))/1024 as "KB/second" from summary where activity='"'MIGRATION'"

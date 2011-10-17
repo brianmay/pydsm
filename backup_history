@@ -1,0 +1,23 @@
+./pydsm 'select
+      entity as "Node",
+    activity as "Activity",
+    date(start_time) as "Date",
+    time(start_time) as "Time",
+      cast((end_time-start_time)seconds/60 as decimal(6,1)) as "Min",
+    cast(bytes/1024/1024/1024 as decimal(10,2))as "Total_GiB",
+    case
+        when cast((end_time-start_time) seconds as decimal) >0
+        then cast(bytes/cast((end_time-start_time) seconds as decimal)/1024/1024 as decimal(6,1))
+        else cast(0 as decimal(6,1))
+        end as "MiB/Sec",
+    case
+        when examined >0
+        then cast(affected/examined*100 as decimal(6,1))
+        else cast(0 as decimal(6,1))
+        end as "Volatility_%"
+from summary
+where
+      entity like  upper('"'$1'"')
+    and start_time>=current_timestamp -'"$2"' day
+order by 2,3'
+
