@@ -1,0 +1,2 @@
+#ignore configuration files, these contain plaintext passwords
+*.conf
