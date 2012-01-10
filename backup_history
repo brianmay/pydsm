@@ -1,10 +1,13 @@
+echo "Node,Activity,Start Date,Start Time,End Date,End Time,Minutes,GiB,MiB/Sec,Volatility"
 ./pydsm 'select
       entity as "Node",
     activity as "Activity",
-    date(start_time) as "Date",
-    time(start_time) as "Time",
-      cast((end_time-start_time)seconds/60 as decimal(6,1)) as "Min",
-    cast(bytes/1024/1024/1024 as decimal(10,2))as "Total_GiB",
+    date(start_time) as "Start Date",
+    time(start_time) as "Start Time",
+    date(end_time) as "End Date",
+    time(end_time) as "End Time",
+    cast((end_time-start_time)seconds/60 as decimal(6,1)) as "Min",
+    cast(bytes/1024/1024/1024 as decimal(10,2)) as "Total_GiB",
     case
         when cast((end_time-start_time) seconds as decimal) >0
         then cast(bytes/cast((end_time-start_time) seconds as decimal)/1024/1024 as decimal(6,1))
