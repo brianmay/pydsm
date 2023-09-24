@@ -1,0 +1,90 @@
+tsm: TSM>q driv f=d
+
+                                Library Name: TS3500
+                                  Drive Name: DRIVEA
+                                 Device Type: LTO
+                                     On-Line: Yes
+                                Read Formats: ULTRIUM5C,ULTRIUM5,ULTRIUM4C,ULTRIUM4,ULTRIUM3C,ULTRIUM3
+                               Write Formats: ULTRIUM5C,ULTRIUM5,ULTRIUM4C,ULTRIUM4
+                                     Element: 257
+                                 Drive State: LOADED
+                                 Volume Name: A00112L4
+                                Allocated to: 
+                                         WWN: 5005076300110501
+                               Serial Number: 00078A29FA
+              Last Update by (administrator): VPAC
+                       Last Update Date/Time: 12/04/12   14:21:33
+Cleaning Frequency (Gigabytes/ASNEEDED/NONE): NONE
+
+                                Library Name: TS3500
+                                  Drive Name: DRIVEB
+                                 Device Type: LTO
+                                     On-Line: Yes
+                                Read Formats: ULTRIUM5C,ULTRIUM5,ULTRIUM4C,ULTRIUM4,ULTRIUM3C,ULTRIUM3
+                               Write Formats: ULTRIUM5C,ULTRIUM5,ULTRIUM4C,ULTRIUM4
+                                     Element: 258
+                                 Drive State: LOADED
+                                 Volume Name: A00149L4
+                                Allocated to: 
+                                         WWN: 5005076300110502
+                               Serial Number: 00078A29FD
+              Last Update by (administrator): VPAC
+                       Last Update Date/Time: 12/04/12   14:22:13
+Cleaning Frequency (Gigabytes/ASNEEDED/NONE): NONE
+
+
+
+tsm: TSM>q path f=d
+
+                   Source Name: TSM
+                   Source Type: SERVER
+              Destination Name: TS3500
+              Destination Type: LIBRARY
+                       Library: 
+                     Node Name: 
+                        Device: /dev/IBMchanger0
+              External Manager: 
+              ZOS Media Server: 
+                  Comm. Method: 
+                           LUN: 
+                     Initiator: 0
+                     Directory: 
+                       On-Line: Yes
+Last Update by (administrator): VPAC
+         Last Update Date/Time: 29/03/12   16:50:08
+
+                   Source Name: TSM
+                   Source Type: SERVER
+              Destination Name: DRIVEA
+              Destination Type: DRIVE
+                       Library: TS3500
+                     Node Name: 
+                        Device: /dev/IBMtape1
+              External Manager: 
+              ZOS Media Server: 
+                  Comm. Method: 
+                           LUN: 
+                     Initiator: 0
+                     Directory: 
+                       On-Line: Yes
+Last Update by (administrator): SERVER_CONSOLE
+         Last Update Date/Time: 02/08/12   09:13:29
+
+                   Source Name: TSM
+                   Source Type: SERVER
+              Destination Name: DRIVEB
+              Destination Type: DRIVE
+                       Library: TS3500
+                     Node Name: 
+                        Device: /dev/IBMtape0
+              External Manager: 
+              ZOS Media Server: 
+                  Comm. Method: 
+                           LUN: 
+                     Initiator: 0
+                     Directory: 
+                       On-Line: Yes
+Last Update by (administrator): SERVER_CONSOLE
+         Last Update Date/Time: 16/08/12   13:56:09
+
+

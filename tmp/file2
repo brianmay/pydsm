@@ -1,0 +1,1095 @@
+
+Date/Time                Message                                                   
+--------------------     ----------------------------------------------------------
+13/08/12   05:30:12      ANR2017I Administrator MANAGER issued command: select     
+                          option_value as LANG from options where                  
+                          UPPER(option_value) in ('CHS','ZH_CN','CHT','ZH_TW','DEU-
+                          ','DE_DE','AMENG','EN_US','ENG','ESP','ES_ES','FRA','FR_-
+                          FR','ITA','IT_IT','JPN','JA_JP','KOR','KO_KR','PTB','PT_-
+                          BR') (SESSION: 26923)                                    
+13/08/12   05:30:13      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as ASC from events where LENGTH(domain_name) IS 
+                          NULL and scheduled_start between '2012-08-12 05:30:12'   
+                          and '2012-08-13 05:30:11' and status='Completed' and     
+                          result=0 (SESSION: 26924)                                
+13/08/12   05:30:14      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as ASCE from events where LENGTH(domain_name) IS
+                          NULL and scheduled_start between '2012-08-12 05:30:12'   
+                          and '2012-08-13 05:30:11' and status='Completed' and     
+                          result <> 0 and result <> 11 (SESSION: 26924)            
+13/08/12   05:30:15      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as ASF from events where LENGTH(domain_name) IS 
+                          NULL and scheduled_start between '2012-08-12 05:30:12'   
+                          and '2012-08-13 05:30:11' and status='Failed' (SESSION:  
+                          26924)                                                   
+13/08/12   05:30:16      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as ASM from events where LENGTH(domain_name) IS 
+                          NULL and scheduled_start between '2012-08-12 05:30:12'   
+                          and '2012-08-13 05:30:11' and status='Missed' (SESSION:  
+                          26924)                                                   
+13/08/12   05:30:17      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as SCNE from events where LENGTH(domain_name) IS
+                          NOT NULL and scheduled_start between '2012-08-12         
+                          05:30:12' and '2012-08-13 05:30:11' and                  
+                          status='Completed' and result=0 (SESSION: 26924)         
+13/08/12   05:30:18      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as SCWSF from events where LENGTH(domain_name)  
+                          IS NOT NULL and scheduled_start between '2012-08-12      
+                          05:30:12' and '2012-08-13 05:30:11' and                  
+                          status='Completed' and result=4 (SESSION: 26924)         
+13/08/12   05:30:19      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as SCW from events where LENGTH(domain_name) IS 
+                          NOT NULL and scheduled_start between '2012-08-12         
+                          05:30:12' and '2012-08-13 05:30:11' and                  
+                          status='Completed' and result=8 (SESSION: 26924)         
+13/08/12   05:30:21      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as SCE from events where LENGTH(domain_name) IS 
+                          NOT NULL and scheduled_start between '2012-08-12         
+                          05:30:12' and '2012-08-13 05:30:11' and                  
+                          status='Completed' and result=12 (SESSION: 26924)        
+13/08/12   05:30:22      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as CSF from events where LENGTH(domain_name) IS 
+                          NOT NULL and scheduled_start between '2012-08-12         
+                          05:30:12' and '2012-08-13 05:30:11' and status='Failed'  
+                          (SESSION: 26924)                                         
+13/08/12   05:30:23      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as CSM from events where LENGTH(domain_name) IS 
+                          NOT NULL and scheduled_start between '2012-08-12         
+                          05:30:12' and '2012-08-13 05:30:11' and status='Missed'  
+                          (SESSION: 26924)                                         
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as AWEC from associations where node_name in    
+                          (select node_name from nodes where contact IS NULL)      
+                          (SESSION: 26924)                                         
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          cast(float(sum(bytes))/1024/1024/1024 as decimal(14,2))  
+                          as TGBU from summary where (end_time between '2012-08-12 
+                          05:30:12' and '2012-08-13 05:30:11') and                 
+                          activity='BACKUP' (SESSION: 26924)                       
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          cast(float(sum(bytes))/1024/1024/1024 as decimal(14,2))  
+                          as TGREST from summary where (end_time between           
+                          '2012-08-12 05:30:12' and '2012-08-13 05:30:11') and     
+                          activity='RESTORE' (SESSION: 26924)                      
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          cast(float(sum(bytes))/1024/1024/1024 as decimal(14,2))  
+                          as TGARCH from summary where (end_time between           
+                          '2012-08-12 05:30:12' and '2012-08-13 05:30:11') and     
+                          activity='ARCHIVE' (SESSION: 26924)                      
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          cast(float(sum(bytes))/1024/1024/1024 as decimal(14,2))  
+                          as TGRTRV from summary where (end_time between           
+                          '2012-08-12 05:30:12' and '2012-08-13 05:30:11') and     
+                          activity='RETRIEVE' (SESSION: 26924)                     
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          substr(char(last_backup_date), 1, 16) as LDBB from db    
+                          where cast((current_timestamp-last_backup_date)hours as  
+                          decimal)<24 (SESSION: 26924)                             
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          pct_utilized from db (SESSION: 26924)                    
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          CACHE_HIT_PCT as CACHE_PCT from DB (SESSION: 26924)      
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          max_pct_utilized from log (SESSION: 26924)               
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: RESET      
+                          BUFPOOL  (SESSION: 26924)                                
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          sum(est_capacity_mb) as DPT from stgpools where          
+                          devclass='DISK' (SESSION: 26924)                         
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          (sum(est_capacity_mb * pct_utilized ) /                  
+                          NULLIF(sum(est_capacity_mb),0) ) as DPU from volumes     
+                          where devclass_name='DISK' (SESSION: 26924)              
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as DVOL from volumes where devclass_name='DISK' 
+                          and status<>'ONLINE' (SESSION: 26924)                    
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as NDS from drives (SESSION: 26924)             
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TMS from summary where activity='TAPE MOUNT' 
+                          and cast((current_timestamp-start_time)hours as          
+                          decimal)<24 (SESSION: 26924)                             
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          (sum(end_time-start_time))minutes as MTM from summary    
+                          where activity='TAPE MOUNT' and                          
+                          cast((current_timestamp-start_time)hours as decimal)<24  
+                          (SESSION: 26924)                                         
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*)as TV from volumes (SESSION: 26924)              
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as SV from libvolumes where status='Scratch'    
+                          (SESSION: 26924)                                         
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as UA from volumes where access='UNAVAILABLE'   
+                          (SESSION: 26924)                                         
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*)as RO from volumes where access='READONLY'       
+                          (SESSION: 26924)                                         
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as RW from volumes where (status='FULL') AND    
+                          (pct_utilized<48) (SESSION: 26924)                       
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as ADMIN_TOTAL from admins (SESSION: 26924)     
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as NODE_TOTAL from nodes (SESSION: 26924)       
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as NODE_AIX   from nodes where                  
+                          platform_name='AIX' (SESSION: 26924)                     
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as NODE_HPUX  from nodes where                  
+                          platform_name='HPUX' (SESSION: 26924)                    
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as NODE_LINUX from nodes where                  
+                          platform_name='Linux86' (SESSION: 26924)                 
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as NODE_MAC   from nodes where                  
+                          platform_name='Mac' (SESSION: 26924)                     
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as NODE_NETWARE from nodes where                
+                          platform_name='NetWare' (SESSION: 26924)                 
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as NODE_OS2   from nodes where                  
+                          platform_name='OS/2' (SESSION: 26924)                    
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as NODE_SUN   from nodes where                  
+                          platform_name='SUN SOLARIS' (SESSION: 26924)             
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as NODE_WIN   from nodes where                  
+                          platform_name='WinNT' (SESSION: 26924)                   
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as NODE_W98   from nodes where                  
+                          platform_name='Win98' (SESSION: 26924)                   
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as NODE_W95   from nodes where                  
+                          platform_name='Win95' (SESSION: 26924)                   
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as NODE_UNUSED from nodes where platform_name is
+                          null (SESSION: 26924)                                    
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as NODE_OTHER from nodes where                  
+                          platform_name<>'AIX' and platform_name<>'HPUX' and       
+                          platform_name<>'Linux86' and platform_name<>'Mac' and    
+                          platform_name<>'OS/2' and platform_name<>'SUN SOLARIS'   
+                          and platform_name<>'WinNT' and platform_name<>'Win98' and
+                          platform_name<>'Win95' and platform_name<>'NetWare' and  
+                          platform_name is not null (SESSION: 26924)               
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as FS_TOTAL from filespaces (SESSION: 26924)    
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          licensecompliance from status (SESSION: 26924)           
+13/08/12   05:30:24      ANR2017I Administrator MANAGER issued command: select     
+                          domain_name, schedule_name, node_name,substr(char(schedu-
+                          led_start), 1, 16) as "SCHEDULED_START",substr(char(actu-
+                          al_start), 1, 16) as "ACTUAL_START",status, result from  
+                          events where (scheduled_start between '2012-08-12        
+                          05:30:12' and '2012-08-13 05:30:11') and                 
+                          LENGTH(domain_name) IS NULL  order by                    
+                          scheduled_start,status,result (SESSION: 26926)           
+13/08/12   05:30:26      ANR2017I Administrator MANAGER issued command: select     
+                          domain_name, schedule_name, node_name,substr(char(schedu-
+                          led_start), 1, 16) as "SCHEDULED_START",substr(char(actu-
+                          al_start), 1, 16) as "ACTUAL_START",status, result from  
+                          events where (scheduled_start between '2012-08-12        
+                          05:30:12' and '2012-08-13 05:30:11') and                 
+                          LENGTH(domain_name) IS NOT NULL  order by                
+                          scheduled_start,status,result (SESSION: 26927)           
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 06:00:00' and
+                          '2012-08-12 06:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 07:00:00' and
+                          '2012-08-12 07:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 08:00:00' and
+                          '2012-08-12 08:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 09:00:00' and
+                          '2012-08-12 09:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 10:00:00' and
+                          '2012-08-12 10:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 11:00:00' and
+                          '2012-08-12 11:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 12:00:00' and
+                          '2012-08-12 12:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 13:00:00' and
+                          '2012-08-12 13:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 14:00:00' and
+                          '2012-08-12 14:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 15:00:00' and
+                          '2012-08-12 15:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 16:00:00' and
+                          '2012-08-12 16:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 17:00:00' and
+                          '2012-08-12 17:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 18:00:00' and
+                          '2012-08-12 18:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 19:00:00' and
+                          '2012-08-12 19:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 20:00:00' and
+                          '2012-08-12 20:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 21:00:00' and
+                          '2012-08-12 21:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 22:00:00' and
+                          '2012-08-12 22:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 23:00:00' and
+                          '2012-08-12 23:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 00:00:00' and
+                          '2012-08-13 00:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 01:00:00' and
+                          '2012-08-13 01:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 02:00:00' and
+                          '2012-08-13 02:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 03:00:00' and
+                          '2012-08-13 03:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 04:00:00' and
+                          '2012-08-13 04:59:59') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 05:00:00' and
+                          '2012-08-13 05:30:11') and (activity='BACKUP' or         
+                          activity='ARCHIVE' or activity='RESTORE' or              
+                          activity='RETRIEVE') and (bytes>0) (SESSION: 26928)      
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-12 06:00:00' and '2012-08-12 06:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-12 07:00:00' and '2012-08-12 07:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-12 08:00:00' and '2012-08-12 08:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-12 09:00:00' and '2012-08-12 09:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-12 10:00:00' and '2012-08-12 10:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-12 11:00:00' and '2012-08-12 11:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-12 12:00:00' and '2012-08-12 12:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-12 13:00:00' and '2012-08-12 13:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-12 14:00:00' and '2012-08-12 14:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-12 15:00:00' and '2012-08-12 15:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-12 16:00:00' and '2012-08-12 16:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-12 17:00:00' and '2012-08-12 17:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-12 18:00:00' and '2012-08-12 18:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-12 19:00:00' and '2012-08-12 19:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-12 20:00:00' and '2012-08-12 20:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-12 21:00:00' and '2012-08-12 21:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-12 22:00:00' and '2012-08-12 22:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-12 23:00:00' and '2012-08-12 23:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-13 00:00:00' and '2012-08-13 00:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-13 01:00:00' and '2012-08-13 01:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-13 02:00:00' and '2012-08-13 02:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-13 03:00:00' and '2012-08-13 03:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-13 04:00:00' and '2012-08-13 04:59:59') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:27      ANR2017I Administrator MANAGER issued command: select     
+                          count(*) as TGBU from summary where (end_time between    
+                          '2012-08-13 05:00:00' and '2012-08-13 05:30:11') and     
+                          (activity='TAPE MOUNT') (SESSION: 26929)                 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 06:00:00' and
+                          '2012-08-12 06:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 07:00:00' and
+                          '2012-08-12 07:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 08:00:00' and
+                          '2012-08-12 08:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 09:00:00' and
+                          '2012-08-12 09:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 10:00:00' and
+                          '2012-08-12 10:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 11:00:00' and
+                          '2012-08-12 11:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 12:00:00' and
+                          '2012-08-12 12:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 13:00:00' and
+                          '2012-08-12 13:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 14:00:00' and
+                          '2012-08-12 14:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 15:00:00' and
+                          '2012-08-12 15:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 16:00:00' and
+                          '2012-08-12 16:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 17:00:00' and
+                          '2012-08-12 17:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 18:00:00' and
+                          '2012-08-12 18:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 19:00:00' and
+                          '2012-08-12 19:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 20:00:00' and
+                          '2012-08-12 20:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 21:00:00' and
+                          '2012-08-12 21:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 22:00:00' and
+                          '2012-08-12 22:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 23:00:00' and
+                          '2012-08-12 23:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 00:00:00' and
+                          '2012-08-13 00:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 01:00:00' and
+                          '2012-08-13 01:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 02:00:00' and
+                          '2012-08-13 02:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 03:00:00' and
+                          '2012-08-13 03:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 04:00:00' and
+                          '2012-08-13 04:59:59') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 05:00:00' and
+                          '2012-08-13 05:30:11') and (activity='MIGRATION') and    
+                          (bytes>0) (SESSION: 26930)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 06:00:00' and
+                          '2012-08-12 06:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 07:00:00' and
+                          '2012-08-12 07:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 08:00:00' and
+                          '2012-08-12 08:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 09:00:00' and
+                          '2012-08-12 09:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 10:00:00' and
+                          '2012-08-12 10:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 11:00:00' and
+                          '2012-08-12 11:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 12:00:00' and
+                          '2012-08-12 12:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 13:00:00' and
+                          '2012-08-12 13:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 14:00:00' and
+                          '2012-08-12 14:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 15:00:00' and
+                          '2012-08-12 15:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 16:00:00' and
+                          '2012-08-12 16:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 17:00:00' and
+                          '2012-08-12 17:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 18:00:00' and
+                          '2012-08-12 18:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 19:00:00' and
+                          '2012-08-12 19:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 20:00:00' and
+                          '2012-08-12 20:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 21:00:00' and
+                          '2012-08-12 21:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 22:00:00' and
+                          '2012-08-12 22:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 23:00:00' and
+                          '2012-08-12 23:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 00:00:00' and
+                          '2012-08-13 00:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 01:00:00' and
+                          '2012-08-13 01:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 02:00:00' and
+                          '2012-08-13 02:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 03:00:00' and
+                          '2012-08-13 03:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 04:00:00' and
+                          '2012-08-13 04:59:59') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 05:00:00' and
+                          '2012-08-13 05:30:11') and (activity='RECLAMATION') and  
+                          (bytes>0) (SESSION: 26931)                               
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 06:00:00' and
+                          '2012-08-12 06:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 07:00:00' and
+                          '2012-08-12 07:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 08:00:00' and
+                          '2012-08-12 08:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 09:00:00' and
+                          '2012-08-12 09:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 10:00:00' and
+                          '2012-08-12 10:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 11:00:00' and
+                          '2012-08-12 11:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 12:00:00' and
+                          '2012-08-12 12:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 13:00:00' and
+                          '2012-08-12 13:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 14:00:00' and
+                          '2012-08-12 14:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 15:00:00' and
+                          '2012-08-12 15:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 16:00:00' and
+                          '2012-08-12 16:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 17:00:00' and
+                          '2012-08-12 17:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 18:00:00' and
+                          '2012-08-12 18:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 19:00:00' and
+                          '2012-08-12 19:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 20:00:00' and
+                          '2012-08-12 20:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 21:00:00' and
+                          '2012-08-12 21:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 22:00:00' and
+                          '2012-08-12 22:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 23:00:00' and
+                          '2012-08-12 23:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 00:00:00' and
+                          '2012-08-13 00:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 01:00:00' and
+                          '2012-08-13 01:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 02:00:00' and
+                          '2012-08-13 02:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 03:00:00' and
+                          '2012-08-13 03:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 04:00:00' and
+                          '2012-08-13 04:59:59') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:28      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 05:00:00' and
+                          '2012-08-13 05:30:11') and (activity='FULL_DBBACKUP' or  
+                          activity='INCR_DBBACKUP') and (bytes>0) (SESSION: 26932) 
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 06:00:00' and
+                          '2012-08-12 06:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 07:00:00' and
+                          '2012-08-12 07:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 08:00:00' and
+                          '2012-08-12 08:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 09:00:00' and
+                          '2012-08-12 09:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 10:00:00' and
+                          '2012-08-12 10:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 11:00:00' and
+                          '2012-08-12 11:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 12:00:00' and
+                          '2012-08-12 12:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 13:00:00' and
+                          '2012-08-12 13:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 14:00:00' and
+                          '2012-08-12 14:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 15:00:00' and
+                          '2012-08-12 15:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 16:00:00' and
+                          '2012-08-12 16:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 17:00:00' and
+                          '2012-08-12 17:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 18:00:00' and
+                          '2012-08-12 18:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 19:00:00' and
+                          '2012-08-12 19:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 20:00:00' and
+                          '2012-08-12 20:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 21:00:00' and
+                          '2012-08-12 21:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 22:00:00' and
+                          '2012-08-12 22:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-12 23:00:00' and
+                          '2012-08-12 23:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 00:00:00' and
+                          '2012-08-13 00:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 01:00:00' and
+                          '2012-08-13 01:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 02:00:00' and
+                          '2012-08-13 02:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 03:00:00' and
+                          '2012-08-13 03:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 04:00:00' and
+                          '2012-08-13 04:59:59') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(bytes/1024 as decimal(14,2))) as TGBU from      
+                          summary where (end_time between '2012-08-13 05:00:00' and
+                          '2012-08-13 05:30:11') and (activity='STGPOOL BACKUP')   
+                          and (bytes>0) (SESSION: 26933)                           
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-12 06:00:00' and        
+                          '2012-08-12 06:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-12 07:00:00' and        
+                          '2012-08-12 07:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-12 08:00:00' and        
+                          '2012-08-12 08:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-12 09:00:00' and        
+                          '2012-08-12 09:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-12 10:00:00' and        
+                          '2012-08-12 10:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-12 11:00:00' and        
+                          '2012-08-12 11:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-12 12:00:00' and        
+                          '2012-08-12 12:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-12 13:00:00' and        
+                          '2012-08-12 13:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-12 14:00:00' and        
+                          '2012-08-12 14:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-12 15:00:00' and        
+                          '2012-08-12 15:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-12 16:00:00' and        
+                          '2012-08-12 16:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-12 17:00:00' and        
+                          '2012-08-12 17:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-12 18:00:00' and        
+                          '2012-08-12 18:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-12 19:00:00' and        
+                          '2012-08-12 19:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-12 20:00:00' and        
+                          '2012-08-12 20:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-12 21:00:00' and        
+                          '2012-08-12 21:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-12 22:00:00' and        
+                          '2012-08-12 22:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-12 23:00:00' and        
+                          '2012-08-12 23:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-13 00:00:00' and        
+                          '2012-08-13 00:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-13 01:00:00' and        
+                          '2012-08-13 01:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-13 02:00:00' and        
+                          '2012-08-13 02:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-13 03:00:00' and        
+                          '2012-08-13 03:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-13 04:00:00' and        
+                          '2012-08-13 04:59:59') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          sum(cast(affected as decimal(14,2))) as TGBU from summary
+                          where (end_time between '2012-08-13 05:00:00' and        
+                          '2012-08-13 05:30:11') and (activity='EXPIRATION')       
+                          (SESSION: 26934)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          node_name,platform_name,client_os_level,client_version,c-
+                          lient_release,client_level,client_sublevel from nodes    
+                          where node_name in (select entity from summary where     
+                          (activity='BACKUP' or activity='RESTORE' or              
+                          activity='ARCHIVE' or activity='RETRIEVE') and (end_time 
+                          between '2012-08-12 05:30:12' and '2012-08-13 05:30:11'))
+                          (SESSION: 26935)                                         
+13/08/12   05:30:29      ANR2017I Administrator MANAGER issued command: select     
+                          entity,activity,bytes as BYTES from summary where        
+                          (activity='BACKUP' or activity='RESTORE' or              
+                          activity='ARCHIVE' or activity='RETRIEVE') and (end_time 
+                          between '2012-08-12 05:30:12' and '2012-08-13 05:30:11') 
+                          order by bytes desc (SESSION: 26935)                     
+13/08/12   05:30:30      ANR2017I Administrator MANAGER issued command: select     
+                          substr(char(date_time), 1, 16) as date_time,message from 
+                          actlog where (date_time between '2012-08-12 05:30:12' and
+                          '2012-08-13 05:30:11') and severity<>'I' (SESSION: 26936)
+13/08/12   05:30:30      ANR2017I Administrator MANAGER issued command: select     
+                          nodename,substr(char(date_time), 1, 16) as "TME",message 
+                          from actlog where (msgno=4005 or msgno=4007 or msgno=4018
+                          or msgno=4037 or msgno=4987) and (date_time between      
+                          '2012-08-12 05:30:12' and '2012-08-13 05:30:11') order by
+                          nodename (SESSION: 26937)                                
+13/08/12   05:30:30      ANR2017I Administrator MANAGER issued command: ROLLBACK   
+                          (SESSION: 26937)                                         
+13/08/12   05:30:30      ANR2017I Administrator MANAGER issued command: select     
+                          msgno,nodename,sessid,message from actlog where (        
+                          msgno=4952 or msgno=4953 or msgno=4954 or msgno=4955 or  
+                          msgno=4956 or msgno=4957 or msgno=4958 or msgno=4959 or  
+                          msgno=4960 or msgno=4961 or msgno=4964 or msgno=4967 or  
+                          msgno=4968 or msgno=4970 ) and (date_time between        
+                          '2012-08-12 05:30:12' and '2012-08-13 05:30:11') order by
+                          sessid (SESSION: 26938)                                  
+13/08/12   05:30:30      ANR2017I Administrator MANAGER issued command: select     
+                          node_name,contact from nodes where node_name in (select  
+                          node_name from nodes where node_name in (select node_name
+                          from events where (scheduled_start between '2012-08-12   
+                          05:30:12' and '2012-08-13 05:30:11') and                 
+                          LENGTH(domain_name) IS NOT NULL and (status='Failed')))  
+                          (SESSION: 26939)                                         
+13/08/12   05:30:31      ANR2017I Administrator MANAGER issued command: ROLLBACK   
+                          (SESSION: 26939)                                         
+13/08/12   05:30:32      ANR2017I Administrator MANAGER issued command: select     
+                          node_name,contact from nodes where node_name in (select  
+                          node_name from nodes where node_name in (select node_name
+                          from events where (scheduled_start between '2012-08-12   
+                          05:30:12' and '2012-08-13 05:30:11') and                 
+                          LENGTH(domain_name) IS NOT NULL and (status='Missed')))  
+                          (SESSION: 26940)                                         
+13/08/12   05:30:33      ANR2017I Administrator MANAGER issued command: ROLLBACK   
+                          (SESSION: 26940)                                         
+13/08/12   11:16:58      ANR2017I Administrator BRIAN issued command: LOG          
+                          search="manager issued command:"  (SESSION: 27007)       
+13/08/12   11:17:05      ANR2017I Administrator BRIAN issued command: QUERY ACTLOG 
+                          search="manager issued command:" begintime=00:00         
+                          (SESSION: 27007)                                         
+13/08/12   11:17:27      ANR2017I Administrator BRIAN issued command: QUERY ACTLOG 
+                          search="manager issued command:" begintime=00:00         
+                          (SESSION: 27007)                                         
