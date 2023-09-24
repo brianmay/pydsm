@@ -1,6 +1,6 @@
 echo "Node,Activity,Start Date,Start Time,End Date,End Time,Minutes,GiB,MiB/Sec,Volatility"
-./pydsm 'select
-      entity as "Node",
+./pydsm.py 'select
+    entity as "Node",
     activity as "Activity",
     date(start_time) as "Start Date",
     time(start_time) as "Start Time",
@@ -20,7 +20,6 @@ echo "Node,Activity,Start Date,Start Time,End Date,End Time,Minutes,GiB,MiB/Sec,
         end as "Volatility_%"
 from summary
 where
-      entity like  upper('"'$1'"')
-    and start_time>=current_timestamp -'"$2"' day
+    activity='"'BACKUP'"'
 order by 2,3'
 
